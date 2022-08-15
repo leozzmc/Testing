@@ -1,2 +1,0 @@
-# Testing
-For testing scripts.

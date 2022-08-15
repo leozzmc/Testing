@@ -1,0 +1,56 @@
+site_name: OpenPecha
+repo_name: OpenPecha/Toolkit
+repo_url: https://github.com/OpenPecha/Toolkit
+edit_uri: "blob/master/docs/docs"
+
+theme:
+  name: material
+  features:
+    - search.highlight
+    - content.code.annotate
+    - navigation.tabs
+    - navigation.top
+
+nav:
+  - Home:
+    - Introduction: index.md
+  - How to:
+    - Developer Guide:
+      - developer/00_index.md
+      - developer/layer.md
+      - developer/pecha.md
+      - developer/metadata.md
+  - Plugins:
+    - Import:
+      - importers/00_index.md
+      - importers/hfml.md
+    - Export: exporters.md
+  - Specs:
+    - OPF Format: opf-format.md
+    - Annotations: annotations.md
+  - Code Reference:
+    - reference/core.md
+  - Development:
+    - Contributing: contributing.md
+    - Code of Conduct: code_of_conduct.md
+
+markdown_extensions:
+  - toc:
+      permalink: true
+  - markdown.extensions.codehilite:
+      guess_lang: false
+  - mdx_include:
+      base_path: docs
+  - admonition
+  - codehilite
+  - extra
+  - pymdownx.superfences:
+      custom_fences:
+      - name: mermaid
+        class: mermaid
+        format: !!python/name:pymdownx.superfences.fence_code_format ''
+  - pymdownx.tabbed
+
+plugins:
+  - search
+  - mkdocstrings

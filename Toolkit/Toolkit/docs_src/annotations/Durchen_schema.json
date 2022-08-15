@@ -1,0 +1,60 @@
+{
+  "title": "Durchen",
+  "type": "object",
+  "properties": {
+    "id": {
+      "title": "Id",
+      "type": "string"
+    },
+    "span": {
+      "$ref": "#/definitions/Span"
+    },
+    "metadata": {
+      "title": "Metadata",
+      "default": {},
+      "type": "object"
+    },
+    "default": {
+      "title": "Default",
+      "description": "text_name of the default option",
+      "type": "string"
+    },
+    "options": {
+      "title": "Options",
+      "description": "all other spell options in dict of {text_name, option}",
+      "type": "object",
+      "additionalProperties": {
+        "type": "string"
+      }
+    }
+  },
+  "required": [
+    "span",
+    "default",
+    "options"
+  ],
+  "additionalProperties": false,
+  "definitions": {
+    "Span": {
+      "title": "Span",
+      "type": "object",
+      "properties": {
+        "start": {
+          "title": "Start",
+          "minimum": 0,
+          "type": "integer"
+        },
+        "end": {
+          "title": "End",
+          "minimum": 0,
+          "type": "integer"
+        }
+      },
+      "required": [
+        "start",
+        "end"
+      ],
+      "additionalProperties": false
+    }
+  }
+}

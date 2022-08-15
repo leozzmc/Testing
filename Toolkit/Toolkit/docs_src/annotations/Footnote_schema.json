@@ -1,0 +1,45 @@
+{
+  "title": "Footnote",
+  "type": "object",
+  "properties": {
+    "id": {
+      "title": "Id",
+      "type": "string"
+    },
+    "span": {
+      "$ref": "#/definitions/Span"
+    },
+    "metadata": {
+      "title": "Metadata",
+      "default": {},
+      "type": "object"
+    }
+  },
+  "required": [
+    "span"
+  ],
+  "additionalProperties": false,
+  "definitions": {
+    "Span": {
+      "title": "Span",
+      "type": "object",
+      "properties": {
+        "start": {
+          "title": "Start",
+          "minimum": 0,
+          "type": "integer"
+        },
+        "end": {
+          "title": "End",
+          "minimum": 0,
+          "type": "integer"
+        }
+      },
+      "required": [
+        "start",
+        "end"
+      ],
+      "additionalProperties": false
+    }
+  }
+}

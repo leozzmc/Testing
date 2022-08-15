@@ -1,0 +1,21 @@
+{
+  "title": "Span",
+  "type": "object",
+  "properties": {
+    "start": {
+      "title": "Start",
+      "minimum": 0,
+      "type": "integer"
+    },
+    "end": {
+      "title": "End",
+      "minimum": 0,
+      "type": "integer"
+    }
+  },
+  "required": [
+    "start",
+    "end"
+  ],
+  "additionalProperties": false
+}

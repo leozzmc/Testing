@@ -1,0 +1,65 @@
+{
+  "title": "Pagination",
+  "type": "object",
+  "properties": {
+    "id": {
+      "title": "Id",
+      "type": "string"
+    },
+    "span": {
+      "$ref": "#/definitions/Span"
+    },
+    "metadata": {
+      "title": "Metadata",
+      "default": {},
+      "type": "object"
+    },
+    "page_info": {
+      "title": "Page Info",
+      "description": "page payload",
+      "type": "string"
+    },
+    "imgnum": {
+      "title": "Imgnum",
+      "description": "image sequence number",
+      "type": "integer"
+    },
+    "order": {
+      "title": "Order",
+      "description": "order of the page",
+      "type": "integer"
+    },
+    "reference": {
+      "title": "Reference",
+      "description": "can be url or just string indentifier of source page",
+      "type": "string"
+    }
+  },
+  "required": [
+    "span"
+  ],
+  "additionalProperties": false,
+  "definitions": {
+    "Span": {
+      "title": "Span",
+      "type": "object",
+      "properties": {
+        "start": {
+          "title": "Start",
+          "minimum": 0,
+          "type": "integer"
+        },
+        "end": {
+          "title": "End",
+          "minimum": 0,
+          "type": "integer"
+        }
+      },
+      "required": [
+        "start",
+        "end"
+      ],
+      "additionalProperties": false
+    }
+  }
+}

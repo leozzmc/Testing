@@ -1,0 +1,37 @@
+# Environment
+.env/
+.venv
+.vscode/
+openpecha.egg-info/
+.pytest_cache/
+
+# data
+**/data/*
+**/__pycache__/
+usage/input/
+usage/layer_output/
+output/
+opfs/
+resources/
+error_logs/
+assets/
+
+# scripts
+usage/
+
+# Deployment
+build/
+dist/
+
+# test
+.coverage
+design/
+
+# Config
+**/config/*
+.idea/*
+**/.openpecha
+
+# docs
+site
+docs.yml
